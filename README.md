@@ -5,9 +5,7 @@ Basic client OS detection with bot/crawler/spider support adapted from [gorangaj
 ## Include
 
 ```js
-
-<script src="https://rawgit.com/yieme/clientis/master/clientis.js"></script>
-
+<script src="https://rawgit.com/yieme/clientis/2.0.0/clientis.js"></script>
 ```
 
 ## ClientIs() usage
