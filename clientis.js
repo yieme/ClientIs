@@ -930,7 +930,7 @@
     ];
     var regex = new RegExp('(' + list.join('|') + ')', 'ig')
     // phantom detect http://engineering.shapesecurity.com/2015/01/detecting-phantomjs-based-visitors.html
-    os = ((phamtomDetect && (WINDOW.callPhantom || WINDOW._phantom)) || regex.test(userAgent)) ? 'Bot' : os
+    os = ((phantomDetect && (WINDOW.callPhantom || WINDOW._phantom)) || regex.test(userAgent)) ? 'Bot' : os
     return os.replace('Mac', 'OSX').replace('Win', 'Windows')
   }
 
