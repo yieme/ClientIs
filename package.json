@@ -1,7 +1,7 @@
 {
-  "name": "isbot",
+  "name": "clientis",
   "version": "2.0.0",
-  "description": "detects bots/crawlers/spiders via the user agent.",
+  "description": "Basic client OS detection with bot/crawler/spider support",
   "main": "index.js",
   "scripts": {
     "test": "mocha test.js"
@@ -17,12 +17,12 @@
     "googlebot",
     "useragent"
   ],
-  "author": "Goran Gajic",
+  "author": "Yieme",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gorangajic/isbot/issues"
+    "url": "https://github.com/yieme/isbot/issues"
   },
-  "homepage": "https://github.com/gorangajic/isbot",
+  "homepage": "https://github.com/yieme/isbot",
   "devDependencies": {
     "chai": "^3.2.0",
     "mocha": "^2.2.5",
