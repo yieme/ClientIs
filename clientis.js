@@ -1,3 +1,4 @@
+console.log('v1')
 (function(WINDOW, NAVIGATOR, CLIENTIS, ISBOT, ver, os, i, list){
   WINDOW[CLIENTIS] = function(useragent, phantomDetect) {
     if (!useragent) {
