@@ -1,15 +1,20 @@
-console.log('v1')
+/*
+ClientIs 2.0.0
+License: MIT
+github.com/yieme/ClientIs
+*/
+
 (function(WINDOW, NAVIGATOR, CLIENTIS, ISBOT, ver, os, i, list){
-  WINDOW[CLIENTIS] = function(useragent, phantomDetect) {
-    if (!useragent) {
-      useragent = NAVIGATOR.userAgent
+  WINDOW[CLIENTIS] = function(userAgent, phantomDetect) {
+    if (!userAgent) {
+      userAgent = NAVIGATOR.userAgent
       phantomDetect = phantomDetect || (phantomDetect === undefined)
     }
     // returns: Windows, OSX, iOS, Android, X11, Linux, Bot, or Unknown
     os   = "Unknown" // unknown
     list = ['Win', 'Mac', 'X11', 'Linux', 'iPhone', 'iPad', 'iPod', 'Android']
     for (i=0; i < list.length; i++) {
-      if (useragent.indexOf(list[i]) >= 0) os = list[i]
+      if (userAgent.indexOf(list[i]) >= 0) os = list[i]
     }
     // bot detect list from list.js
     list = [
@@ -935,7 +940,7 @@ console.log('v1')
     return os.replace('Mac', 'OSX').replace('Win', 'Windows')
   }
 
-  WINDOW[ISBOT] = function(useragent, phantomDetect) {
-    return (WINDOW[CLIENTIS](useragent, phantomDetect) == 'Bot')
+  WINDOW[ISBOT] = function(userAgent, phantomDetect) {
+    return (WINDOW[CLIENTIS](userAgent, phantomDetect) == 'Bot')
   }
 })(window, navigator, 'ClientIs', 'IsBot')
